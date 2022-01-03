@@ -39,7 +39,7 @@ def main():
     if args.include_original:
         flt.append("en")
     extracted = df.loc[:, flt]
-    extracted.to_csv("output.csv", index=False)
+    extracted.to_csv(args.output, index=False)
     return 0
 
 sys.exit(main())
